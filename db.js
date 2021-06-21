@@ -2,11 +2,11 @@ const Pool = require('pg').Pool
 
 // Database configuration
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'codebrewDB',
-    password: 'password',
-    port: 5432,
+    user: process.env.user || 'postgres',
+    host: process.env.host || 'localhost',
+    database: process.env.database || 'codebrewDB',
+    password: process.env.password || 'password',
+    port: process.env.port || 5432,
 })
 
 
